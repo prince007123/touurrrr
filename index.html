@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TOUR & TRAVELS - Mobile</title>
+
+  <!-- mobile CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- NAVBAR: Menu (left) | Home (center) | Sign Up (right) -->
+  <header class="navbar" role="navigation">
+    <button id="menuBtn" class="icon-btn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+
+  <a href="http://127.0.0.1:5500/index.html"> <button id="homeBtn" class="home-btn" aria-label="Home">Home</button> </a>
+
+    <button id="openSignup" class="signup-btn" aria-label="Sign Up"><i class="fa-solid fa-user-plus"></i><span>Sign Up</span></button>
+  </header>
+
+  <!-- Sidebar (left) -->
+  <aside id="sidebar" class="sidebar" aria-hidden="true">
+    <button id="closeSidebar" class="close-sidebar" aria-label="Close menu">×</button>
+    <nav class="sb-nav" aria-label="Sidebar navigation">
+      <a href="#" class="sb-link"><i class="fa-solid fa-user"></i><span>My Profile</span></a>
+      <a href="#" class="sb-link"><i class="fa-solid fa-comments"></i><span>Live Chat</span></a>
+      <a href="sidebar_responsive.html" class="sb-link"><i class="fa-solid fa-suitcase"></i><span>Travel Essentials</span></a>
+      <a onclick="location.href='#destinations-section'" class="sb-link"><i class="fa-solid fa-map-location-dot"></i><span>Destinations</span></a>
+<a href="#" class="sb-link" onclick="scrollToOffers(event)"><i class="fa-solid fa-percent"></i><span>Offers</span></a>
+      <a href="https://wa.me/917668187737" target="_blank" class="sb-link"><i class="fa-solid fa-headset"></i><span>Contact</span></a>
+      <a href="http://127.0.0.1:5500/timings.html" class="sb-link"><i class="fa-solid fa-clock"></i><span>Timings</span></a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- HERO: slideshow + booking together (hero-bg uses car-window-man.png) -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <!-- slideshow -->
+      <div class="slideshow" aria-label="Featured slides">
+        <div class="slides-wrapper">
+          <div class="slide active">
+            <img src="img1.jpg" alt="Discover Rishikesh">
+            <div class="caption">Discover Rishikesh</div>
+          </div>
+          <div class="slide">
+            <img src="img2.jpg" alt="Discover Nainital">
+            <div class="caption">Discover Nainital</div>
+          </div>
+          <div class="slide">
+            <img src="img3.jpg" alt="Discover Haridwar">
+            <div class="caption">Discover Haridwar</div>
+          </div>
+          <div class="slide">
+            <img src="img4.jpg" alt="Discover Massoorie">
+            <div class="caption">Discover Massoorie</div>
+          </div>
+          <div class="slide">
+            <img src="img5.jpg" alt="Discover Dehradun">
+            <div class="caption">Discover Dehradun</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- booking form (inside hero so hero-bg sits behind) -->
+      <div class="booking-section" aria-label="Booking form">
+        <form class="booking-form" onsubmit="return false;">
+          <p>CHOOSE LOCATIONS</p>
+
+          <div class="input-row">
+            <input id="startPoint" type="text" placeholder="Choose Starting Point" autocomplete="off" />
+          </div>
+
+          <div class="location-icon">
+            <img src="loaction-to_-loaction-removebg-preview.png" alt="location icon">
+          </div>
+
+          <div class="input-row">
+            <input id="dropPoint" type="text" placeholder="Choose Dropping Point" autocomplete="off" />
+          </div>
+
+          <div class="start">
+            <button id="startJourney" class="start-btn" type="button">Start Journey</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations-section" class="destination-full-box" aria-label="Destinations">
+      <div class="dest-bg" aria-hidden="true"></div>
+
+      <div class="destination-content">
+        <h2>Top Destinations You Can’t Miss</h2>
+        <div class="shop-section">
+          <article class="box">
+            <div class="box-img" style="background-image: url('dhanaulti-loca1.jpeg');"></div>
+            <div class="box-content"><p>Dhanaulti (Near Mussoorie)</p></div>
+          </article>
+
+          <article class="box">
+            <div class="box-img" style="background-image: url('rajaji_national_park.jpg');"></div>
+            <div class="box-content"><p>Rajaji National Park (Between Haridwar & Dehradun)</p></div>
+          </article>
+
+          <article class="box">
+            <div class="box-img" style="background-image: url('neelkanth-mahdev-mandir.jpg');"></div>
+            <div class="box-content"><p>Neelkanth Mahadev Temple (Near Rishikesh)</p></div>
+          </article>
+
+          <article class="box">
+            <div class="box-img" style="background-image: url('Tehri-Lake-Cruise.jpg');"></div>
+            <div class="box-content"><p>Tehri Lake (Near Rishikesh/Chamba)</p></div>
+          </article>
+
+          <article class="box">
+            <div class="box-img" style="background-image: url('Vashishta-Gufa-Rishikesh.jpg');"></div>
+            <div class="box-content"><p>Vashishta Gufa (Near Rishikesh)</p></div>
+          </article>
+
+          <article class="box">
+            <div class="box-img" style="background-image: url('tiger-fall.jpg');"></div>
+            <div class="box-content"><p>Chakrata (Near Dehradun)</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFERS -->
+    <section class="offers-section" aria-label="Offers">
+      <div class="offers-bg" aria-hidden="true"></div>
+
+      <div class="offer-content">
+        <h2>🔥 Exclusive Travel Offers Just for You</h2>
+
+        <div class="offer-boxes">
+          <div class="offer-card" style="background-image: url('images/offer1.jpg');">
+            <div class="overlay"></div>
+            <h3>🌧️ Monsoon Special</h3>
+            <p>Flat 20% off on Mussoorie & Nainital trips.</p>
+            <button class="offer-btn">Book Now</button>
+          </div>
+
+          <div class="offer-card" style="background-image: url('images/offer2.jpg');">
+            <div class="overlay"></div>
+            <h3>⏳ Early Bird Discount</h3>
+            <p>Book 30 days early & get ₹1500 off.</p>
+            <button class="offer-btn">Book Now</button>
+          </div>
+
+          <div class="offer-card" style="background-image: url('images/offer3.jpg');">
+            <div class="overlay"></div>
+            <h3>🗓️ Weekend Getaway</h3>
+            <p>2-Day Rishikesh trip @ just ₹999!</p>
+            <button class="offer-btn">Grab Deal</button>
+          </div>
+
+          <div class="offer-card" style="background-image: url('images/offer4.jpg');">
+            <div class="overlay"></div>
+            <h3>👨‍👩‍👧‍👦 Group Discounts</h3>
+            <p>Travel in group & save ₹2000 instantly.</p>
+            <button class="offer-btn">Know More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Tour & Travels</h3>
+          <p>Your journey starts here. Discover, Explore, Travel with us.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a id="footerHome" href="#">Home</a></li>
+            <li><a href="#destinations-section">Destinations</a></li>
+            <li><a href="#offers-section">Offers</a></li>
+            <li><a href="https://wa.me/917668187737" target="_blank" rel="noopener">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p><i class="fa fa-map-marker"></i> Dehradun, Uttarakhand</p>
+          <p><i class="fa fa-phone"></i> +91 7668187737</p>
+          <p><i class="fa fa-envelope"></i> <a href="mailto:uk05065020524@gmail.com">uk05065020524@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 Tour & Travels. All rights reserved.</p></div>
+    </footer>
+
+  </main>
+
+  <!-- SIGNUP MODAL -->
+  <div id="signupModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModalBtn" class="close-modal" aria-label="Close">×</button>
+      <h3>Sign Up</h3>
+      <input id="mobileInput" type="text" placeholder="Enter your mobile number" />
+      <p id="errorMsg" class="error"></p>
+      <button id="getOtpBtn">Get OTP</button>
+
+      <div id="otpSection" >
+        <input type="text" placeholder="Enter OTP" />
+        <button>Verify OTP</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    /* ---------- Elements ---------- */
+    const sidebar = document.getElementById('sidebar');
+    const menuBtn = document.getElementById('menuBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebar');
+    const openSignupBtn = document.getElementById('openSignup');
+    const signupModal = document.getElementById('signupModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const getOtpBtn = document.getElementById('getOtpBtn');
+
+    /* ---------- Sidebar (left) ---------- */
+    function openSidebar(){
+      sidebar.setAttribute('aria-hidden','false');
+      sidebar.style.transform = 'translateX(0%)';
+    }
+    function closeSidebar(){
+      sidebar.setAttribute('aria-hidden','true');
+      sidebar.style.transform = 'translateX(-110%)';
+    }
+    menuBtn.addEventListener('click', openSidebar);
+    closeSidebarBtn.addEventListener('click', closeSidebar);
+
+    /* ---------- Modal ---------- */
+    openSignupBtn.addEventListener('click', () => {
+      signupModal.style.display = 'flex';
+      signupModal.setAttribute('aria-hidden','false');
+    });
+    closeModalBtn.addEventListener('click', () => {
+      signupModal.style.display = 'none';
+      signupModal.setAttribute('aria-hidden','true');
+    });
+    window.addEventListener('click', (e) => { if (e.target === signupModal) { signupModal.style.display='none'; signupModal.setAttribute('aria-hidden','true'); } });
+
+    getOtpBtn.addEventListener('click', () => {
+      const mobile = document.getElementById('mobileInput').value.trim();
+      const err = document.getElementById('errorMsg');
+      const regex = /^[6-9]\d{9}$/;
+      if (!regex.test(mobile)) {
+        err.textContent = 'Please enter a valid 10-digit mobile number.';
+      } else {
+        err.textContent = '';
+        document.getElementById('otpSection').style.display = 'block';
+      }
+    });
+
+    /* ---------- Nav quick actions ---------- */
+    document.getElementById('homeBtn').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+    document.getElementById('footerHome').addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); });
+
+    /* ---------- Start journey (simple check + redirect example) ---------- */
+    document.getElementById('startJourney').addEventListener('click', () => {
+      const s = document.getElementById('startPoint').value.trim();
+      const d = document.getElementById('dropPoint').value.trim();
+      if (!s || !d) return alert('Please enter both starting and dropping points.');
+      // Example redirect (adjust to your real search route)
+      window.location.href = `search?start=${encodeURIComponent(s)}&drop=${encodeURIComponent(d)}`;
+    });
+
+    /* ---------- Slideshow: auto + touch swipe ---------- */
+    (function initSlideshow(){
+      const slides = document.querySelectorAll('.slideshow .slide');
+      if (!slides.length) return;
+      let idx = 0;
+      function show(i){
+        slides.forEach((s, k) => s.classList.toggle('active', k===i));
+      }
+      // auto-rotate
+      setInterval(() => { idx = (idx+1) % slides.length; show(idx); }, 4200);
+
+      // swipe support
+      let startX = 0;
+      const wrapper = document.querySelector('.slides-wrapper');
+      wrapper.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+      wrapper.addEventListener('touchend', e => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 40) idx = (idx+1)%slides.length;
+        else if (endX - startX > 40) idx = (idx-1+slides.length)%slides.length;
+        show(idx);
+      });
+    })();
+  </script>
+  
+<script>
+  function scrollToOffers(e) {
+    e.preventDefault(); // link ka default behavior roko
+    const offersSection = document.querySelector('.offers-section');
+    if (offersSection) {
+      offersSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+
+</body>
+</html>

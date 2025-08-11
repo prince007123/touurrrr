@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Famous Places & Timings</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #1d3557;
+      margin-bottom: 30px;
+    }
+    .places-container {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .place-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .place-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #457b9d;
+    }
+    .location {
+      font-size: 0.9rem;
+      color: #6c757d;
+      font-style: italic;
+    }
+    .timing-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .timing-list li {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    .timing-name {
+      font-weight: 600;
+      color: #1d3557;
+    }
+    .timing-time {
+      color: #e63946;
+      font-weight: 700;
+      margin-left: 8px;
+    }
+    .description {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Famous Places & Important Timings</h1>
+
+  <div class="places-container">
+
+    <!-- Char Dham -->
+    <div class="place-card">
+      <div class="place-name">Char Dham</div>
+      <div class="location">Uttarakhand, India</div>
+      <ul class="timing-list">
+        <li><span class="timing-name">Opening Hours:</span><span class="timing-time">5:00 AM - 8:00 PM</span></li>
+        <li><span class="timing-name">Morning Aarti:</span><span class="timing-time">6:00 AM - 7:00 AM</span></li>
+        <li><span class="timing-name">Evening Aarti:</span><span class="timing-time">6:30 PM - 7:30 PM</span></li>
+      </ul>
+      <p class="description">
+        The Char Dham refers to four sacred pilgrimage sites in Uttarakhand: Yamunotri, Gangotri, Kedarnath, and Badrinath. Each offers spiritual experiences and scenic beauty.
+      </p>
+    </div>
+
+    <!-- Haridwar -->
+    <div class="place-card">
+      <div class="place-name">Haridwar</div>
+      <div class="location">Uttarakhand, India</div>
+      <ul class="timing-list">
+        <li><span class="timing-name">Ganga Aarti:</span><span class="timing-time">6:30 PM - 7:30 PM</span></li>
+        <li><span class="timing-name">Temple Opening Hours:</span><span class="timing-time">5:00 AM - 9:00 PM</span></li>
+      </ul>
+      <p class="description">
+        Haridwar is a holy city where the Ganges River exits the Himalayas. The evening Ganga Aarti on the ghats is a major attraction.
+      </p>
+    </div>
+
+    <!-- Rishikesh -->
+    <div class="place-card">
+      <div class="place-name">Rishikesh</div>
+      <div class="location">Uttarakhand, India</div>
+      <ul class="timing-list">
+        <li><span class="timing-name">Morning Aarti at Triveni Ghat:</span><span class="timing-time">6:00 AM - 7:00 AM</span></li>
+        <li><span class="timing-name">Evening Aarti:</span><span class="timing-time">6:00 PM - 7:00 PM</span></li>
+        <li><span class="timing-name">River Rafting Slot 1:</span><span class="timing-time">9:00 AM - 11:00 AM</span></li>
+        <li><span class="timing-name">River Rafting Slot 2:</span><span class="timing-time">3:00 PM - 5:00 PM</span></li>
+      </ul>
+      <p class="description">
+        Known as the Yoga Capital of the World, Rishikesh offers spiritual experiences, adventurous river rafting, and scenic beauty along the Ganges.
+      </p>
+    </div>
+
+    <!-- Mussoorie -->
+    <div class="place-card">
+      <div class="place-name">Mussoorie</div>
+      <div class="location">Uttarakhand, India</div>
+      <ul class="timing-list">
+        <li><span class="timing-name">Monsoon Special Offer:</span><span class="timing-time">N/A</span></li>
+        <li><span class="timing-name">Best Visit Time:</span><span class="timing-time">March - June</span></li>
+      </ul>
+      <p class="description">
+        Popular hill station known for pleasant weather and scenic views. Ideal for trekking, sightseeing, and nature walks.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>

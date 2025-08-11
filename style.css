@@ -1,0 +1,165 @@
+/* ========== MOBILE-FIRST STYLE ========== */
+
+/* resets */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;padding:0;overflow-x:hidden;font-family:'Outfit',system-ui,Arial,sans-serif;background:#fff;-webkit-font-smoothing:antialiased}
+
+/* NAVBAR: simple and small */
+.navbar{
+  position:fixed;top:0;left:0;right:0;height:58px;display:flex;align-items:center;justify-content:space-between;padding:6px 10px;gap:8px;z-index:1300;
+  background:rgba(0,0,0,0.38);backdrop-filter:blur(4px);
+}
+.icon-btn,.home-btn,.signup-btn{background:transparent;border:none;color:#fff;font-size:15px;display:inline-flex;align-items:center;gap:8px;padding:8px;border-radius:8px}
+.home-btn{font-weight:700}
+.signup-btn span{display:none} /* show only icon to save space; icon is enough */
+
+/* sidebar (left) */
+.sidebar{
+  position:fixed;left:-110%;top:0;height:100%;width:78%;max-width:340px;background:#0a0a0a;color:#fff;z-index:1400;padding:18px;transition:transform .28s ease;transform:translateX(-110%)
+}
+.sidebar[aria-hidden="false"]{transform:translateX(0%);left:0}
+.close-sidebar{background:transparent;border:none;color:#fff;font-size:26px;position:absolute;right:12px;top:8px}
+.sb-nav{margin-top:36px;display:flex;flex-direction:column;gap:10px}
+.sb-link{display:flex;align-items:center;gap:12px;padding:10px;border-radius:8px;color:#fff;text-decoration:none}
+.sb-link i{width:22px;text-align:center}
+
+/* main */
+.main-content{position:relative;z-index:6;padding-top:68px;padding-bottom:40px}
+
+/* ===== HERO (slideshow + booking) ===== */
+/* hero-bg only behind the hero section, not global */
+.hero{position:relative;max-width:720px;margin:8px auto;padding:0 10px;min-height:calc(230px + 92px)} /* ensures hero area tall enough */
+.hero-bg{
+  position:absolute;left:10px;right:10px;top:0;height:100%;border-radius:12px;background-image:url('car-window-man.png');background-size:cover;background-position:center;filter:brightness(50%);z-index:0;pointer-events:none;
+}
+
+/* slideshow */
+.slideshow{position:relative;z-index:2;overflow:hidden;border-radius:12px;margin:0 auto;height:230px;max-width:720px;box-shadow:0 6px 18px rgba(0,0,0,0.25);background:#000}
+.slides-wrapper{width:100%;height:100%;position:relative}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .65s ease;display:flex;align-items:flex-end;justify-content:flex-start}
+.slide.active{opacity:1;z-index:2}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.slide .caption{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.45);color:#fff;padding:6px 10px;border-radius:6px;font-size:14px;z-index:6}
+
+/* booking form placed inside hero (so hero-bg is behind it) */
+.booking-section{position:relative;z-index:6;max-width:720px;margin:12px auto 0;padding:0 10px}
+.booking-form{background:rgba(255,255,255,0.96);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+.booking-form p{margin:0 0 10px;font-weight:700;text-align:center}
+.input-row{display:flex;justify-content:center;margin-bottom:10px}
+.input-row input{width:94%;padding:12px 14px;border-radius:999px;border:1px solid #dcdcdc;font-size:15px;outline:none}
+.location-icon{text-align:center;margin:-6px 0 8px}
+.location-icon img{width:56px;display:inline-block}
+.start{display:flex;justify-content:center}
+.start-btn{width:94%;padding:12px;border-radius:10px;border:none;background:#151515;color:#fff;font-weight:700;font-size:15px}
+
+/* ===== DESTINATIONS ===== */
+.destination-full-box{position:relative;max-width:720px;margin:18px auto;padding:12px;border-radius:12px;overflow:visible}
+.dest-bg{position:absolute;inset:0;background-image:url('destination-bg.png');background-size:cover;background-position:center;filter:brightness(65%);z-index:0;border-radius:12px}
+.destination-content{position:relative;z-index:6;color:#fff;padding:12px;text-align:center}
+.destination-content h2{margin:6px 0 12px;font-size:18px;color:#fff}
+.shop-section{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.box{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 6px 14px rgba(0,0,0,0.08)}
+.box-img{height:170px;background-size:cover;background-position:center}
+.box-content{padding:10px;color:#0056b3;font-weight:600;font-size:15px}
+
+/* ===== OFFERS ===== */
+.offers-section{position:relative;max-width:720px;margin:18px auto;padding:12px;border-radius:12px;overflow:visible}
+.offers-bg{position:absolute;inset:0;background-image:url('offer-bg.png');background-size:cover;background-position:center;filter:brightness(60%);z-index:0;border-radius:12px}
+.offer-content{position:relative;z-index:6;color:#fff;padding:12px;text-align:center}
+.offer-content h2{margin:6px 0 12px;font-size:18px}
+.offer-boxes{display:flex;flex-direction:column;gap:12px}
+.offer-card{position:relative;border-radius:10px;padding:16px;background-size:cover;background-position:center;color:#fff;min-height:120px;display:flex;flex-direction:column;justify-content:center}
+.offer-card .overlay{position:absolute;inset:0;background:rgba(0,0,0,0.35);z-index:0}
+.offer-card h3,.offer-card p,.offer-card button{position:relative;z-index:2}
+.offer-btn{margin-top:8px;padding:8px 12px;border-radius:8px;border:none;background:#ffd700;color:#000;font-weight:700}
+
+/* ===== FOOTER ===== */
+.footer{max-width:720px;margin:18px auto 40px;background:#111;color:#fff;border-radius:10px;overflow:hidden}
+.footer-container{padding:14px;display:flex;flex-direction:column;gap:10px}
+.footer a{color:#cfcfcf;text-decoration:none}
+.footer-bottom{text-align:center;padding:8px 12px;font-size:13px;color:#aaa}
+
+/* ===== MODAL ===== */
+.modal{display:none;
+  
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  z-index:1500;
+  align-items:center;
+  justify-content:center;
+text-align: center;}
+
+.modal-content{
+  background:#f5f5f5;
+  padding:14px;
+  border-radius:10px;
+  width:92%;
+  max-width:300px;
+  position:relative;
+  display: block;
+  
+}
+#mobileInput{
+  border-radius:  10px;
+  padding: 10px;
+  border: 1px solid #aaa;
+
+
+}
+#getOtpBtn{
+
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  transition: background-color ease-out 0.1s ;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+#getOtpBtn:hover{
+
+  background-color: #bec1c5;
+
+}
+#otpSection input{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center ;
+  margin-bottom: 10px;
+  margin-left: 53px;
+  border-radius: 10px;
+  padding: 7px;
+  border: 1px solid #aaa;
+
+}
+#otpSection button{
+
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 5px;
+  transition: background-color ease-in-out 0.1s;
+}
+#otpSection button:hover{
+
+  background-color: #bec1c5;
+}
+.close-modal{position:absolute;
+  right:10px;
+  top:8px;
+  border:none;
+  background:transparent;
+  font-size:20px}
+
+/* small screen tweaks */
+@media (max-width:420px){
+  .slideshow{height:200px}
+  .box-img{height:150px}
+  .offer-card{min-height:110px;padding:12px}
+  .slide .caption{font-size:13px;padding:5px 8px}
+}
+
+/* hero min-height sets area for hero-bg — ensures hero-bg doesn't cover full page */
+.hero{min-height:calc(230px + 96px)}
+
+/* ensure no horizontal scroll */
+html,body{overflow-x:hidden}
